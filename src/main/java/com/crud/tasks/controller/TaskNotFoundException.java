@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * Author Kamil Seweryn
  */
 
-@ResponseStatus(HttpStatus.NOT_FOUND)
-public class NotFoundException extends RuntimeException {
+@ResponseStatus(value = HttpStatus.NOT_FOUND, reason = "Task dosen't exist")
+public class TaskNotFoundException extends Exception {
 }
