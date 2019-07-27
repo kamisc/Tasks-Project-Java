@@ -16,6 +16,7 @@ import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
 @RestController
 @RequestMapping("/v1/task")
+@CrossOrigin(origins = "*")
 public class TaskController {
     @Autowired
     private DbService service;
@@ -33,7 +34,7 @@ public class TaskController {
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "deleteTask")
-    public void deleteTask(@RequestParam(value = "id") Long taskId) {
+    public void deleteTask(@RequestParam(value = "taskId") Long taskId) {
         service.deleteTask(taskId);
     }
 
