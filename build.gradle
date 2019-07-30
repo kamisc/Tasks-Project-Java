@@ -20,7 +20,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	// compile('mysql:mysql-connector-java')
 	compile group: 'org.postgresql', name: 'postgresql', version: '42.2.6'
-	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	heroku logitestImplementation('org.springframework.boot:spring-boot-starter-test')
 	compileOnly 'org.projectlombok:lombok:1.18.8'
 	annotationProcessor 'org.projectlombok:lombok:1.18.8'
 
