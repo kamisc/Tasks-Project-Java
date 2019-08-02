@@ -35,13 +35,10 @@ public class TrelloClient {
     @Autowired
     private RestTemplate restTemplate;
 
-    public Optional<List<TrelloBoardDto>> getTrelloBoards() {
+    public List<TrelloBoardDto> getTrelloBoards() {
         TrelloBoardDto[] boardsResponse = restTemplate.getForObject(createTrelloUrl(), TrelloBoardDto[].class);
 
-        if(boardsResponse != null) {
-            return Optional.of(Arrays.asList(boardsResponse));
-        }
-        return Optional.empty();
+        return Optional.of(Arrays.asList(boardsResponse)).orElse(new ArrayList<>());
     }
 
     private URI createTrelloUrl() {
