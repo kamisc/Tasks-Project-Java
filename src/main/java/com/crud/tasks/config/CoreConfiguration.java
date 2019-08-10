@@ -31,6 +31,7 @@ public class CoreConfiguration implements WebMvcConfigurer {
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.regex("(?!.*trello).*$"))
+                .paths(PathSelectors.regex("(?!.*error).*$"))
                 .build();
     }
 
