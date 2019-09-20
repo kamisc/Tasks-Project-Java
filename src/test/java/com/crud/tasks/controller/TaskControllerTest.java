@@ -61,7 +61,6 @@ public class TaskControllerTest {
         mockMvc.perform(get("/v1/task/getTasks").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().is(200))
                 .andExpect(jsonPath("$", hasSize(2)));
-
     }
 
     @Test
