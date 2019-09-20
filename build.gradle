@@ -25,6 +25,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok:1.18.8'
 	// providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	compile('org.springframework.boot:spring-boot-starter-mail:2.1.7.RELEASE')
+	compile('org.springframework.boot:spring-boot-starter-actuator')
 	
 	compile('com.google.code.gson:gson:2.8.2')
 
