@@ -26,6 +26,7 @@ dependencies {
 	// providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	compile('org.springframework.boot:spring-boot-starter-mail:2.1.7.RELEASE')
 	compile('org.springframework.boot:spring-boot-starter-actuator')
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	
 	compile('com.google.code.gson:gson:2.8.2')
 
