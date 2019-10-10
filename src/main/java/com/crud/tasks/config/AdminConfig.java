@@ -22,4 +22,7 @@ public class AdminConfig {
 
     @Value("${info.company.name}")
     private String companyName;
+
+    @Value("${info.company.phone}")
+    private String companyPhone;
 }
