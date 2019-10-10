@@ -33,7 +33,18 @@ public class EmailScheduler {
                 adminConfig.getAdminMail(),
                 null,
                 SUBJECT,
-                "Currently in databas you got: " + size + (size < 2 ? " task" : " tasks"))
+                "Currently in database you got: " + size + (size < 2 ? " task" : " tasks"))
+        );
+    }
+
+    @Scheduled(cron = "0 0 7 * * *")
+    public void sendInformationAboutDailyTask() {
+        long size = taskRepository.count();
+        simpleEmailService.send(new Mail(
+                adminConfig.getAdminMail(),
+                null,
+                SUBJECT,
+                "Currently in database you got: " + size + (size < 2 ? " task" : " tasks"))
         );
     }
 }
