@@ -1,7 +1,5 @@
 # Java Task CRUD Application
 
-[![Build Status](https://travis-ci.org/kamisc/Tasks-Project-Java.svg?branch=master)](https://travis-ci.org/kamisc/Tasks-Project-Java)
-
 ## Description
 In this repository you can find REST API code written in Java language for Task Application project. 
 
